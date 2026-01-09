@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🗨️Lorem Ipsum Generator</title>
+    <!-- linke style css -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <form class="form-contant">
+        <div class="card-contant">
+            <div class="title">select tag:</div>
+            <select class="select" id="tag-select">
+                <!-- render-option -->
+            </select>
+            <div class="title">paragraph: <span id="value-para">1</span></div>
+            <input type="range" id="range-paragraph" min="0" max="30" value="1">
+
+            <div class="title">word: <span id="value-word">10</span></div>
+            <input type="range" id="range-word" min="0" max="150" value="10">
+
+            <div class="title">Include HTML:</div>
+            <select class="select" id="include-html">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            
+            <div><button class="btn" id="button">Generate Text</button></div>
+            <div class="container-render" id="render-html">
+                <!-- render from javascript -->
+            </div>
+        </div>
+    </form>
+
+    <!-- linke script js -->
+    <script src="./script.js" type="module"></script>
+</body>
+
+</html>
