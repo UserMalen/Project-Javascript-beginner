@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Range Slider</title>
+    <!-- linke style css -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container-form">
+        <form>
+            <div class="card-form">
+                <h1>Price Range Slider</h1>
+                <div class="contant-input">
+                    <label>Minimum Price</label>
+                    <input type="number" class="min-input" value="100">
+                    <label>Maximum Price</label>
+                    <input type="number" class="max-input" value="500">
+                </div>
+                <div class="contant-slider">
+                    <div class="slider"></div>
+                </div>
+                <div class="contant-range">
+                    <input type="range" class="range-min" min="0" max="1000" value="100" step="1">
+                    <input type="range" class="range-max" min="0" max="1000" value="500" step="1">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- linke javascript -->
+    <script src="./script.js" type="module"></script>
+</body>
+
+</html>
