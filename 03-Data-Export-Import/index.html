@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data-Export-Import</title>
+    <!-- link style css -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div>
+            <input type="file" id="fileCsv-element" accept=".csv">
+            <button type="button" id="btnExport">Export to CSV</button>
+        </div>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Class</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody id="tablebody">
+            <tr>
+                <td>Jong</td>
+                <td>Male</td>
+                <td>10A</td>
+                <td>Phnom Penh</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <!-- link javascript -->
+    <script src="./script.js" type="module"></script>
+</body>
+</html>
