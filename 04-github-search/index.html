@@ -1,62 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Github Search</title>
     <!-- link style css -->
     <link rel="stylesheet" href="./style.css">
-    <style>
-        * {margin: 0;padding: 0;box-sizing: border-box;font-family: Arial, Helvetica, sans-serif;}
-        .container {
-            margin: 10px;
-        }
-        .container > h1 {
-            color: rgb(25, 22, 22);
-            text-decoration: underline;
-        }
-        .container > .userForm {
-            margin-top: 15px;
-            display: flex;
-            width: 200px;
-            height: 30px;
-            border-radius: 5px;
-            overflow: hidden;
-            transition: all .3s ease-in-out;
-        }
-        .container > .userForm > input {
-            background-color: rgb(227, 222, 222);
-            width: 100%;
-            padding: 2px 7px;
-            outline: none;
-            border: none;
-        }
-        .userForm:hover{
-            transform: scale(1.02);
-        }
-    </style>
 </head>
+
 <body>
     <!-- form -->
-    <div class="container">
+    <form class="container" id="search">
         <h1>Github Search Profile</h1>
-        <div class="userForm"><input type="text" autocomplete="off" placeholder="enter accound user"></div>
-    </div>
-    <main class="main-content">
-        <!-- response ui from javascript-->
+        <div class="userForm">
+            <input id="search-input" type="text" autocomplete="off" placeholder="enter accound user">
+        </div>
+    </form>
+    <main class="main-content" id="main-content">
     </main>
-    
+
     <!-- link script javascrip -->
-    <script src="./script.js" type="module">
-        const baseUl = "";
-        async function getData() {
-            try{
-                const response = await fetch(baseUl);
-            }
-            catch (error) {
-                console.error(error)
-            }
-        }
-    </script>
+    <script src="./script.js" type="module"> </script>
 </body>
+
 </html>
