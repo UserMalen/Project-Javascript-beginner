@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  background-image: linear-gradient(
+    to right,
+    rgb(184, 184, 187),
+    rgb(45, 45, 45)
+  );
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+.container > h1 {
+  text-align: center;
+  color: gray;
+  margin-bottom: 10px;
+}
+.card {
+  background-color: rgb(96, 109, 196);
+  color: whitesmoke;
+  padding: 20px;
+  border-radius: 9px;
+}
+.card button {
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 14px 20px;
+  border: none;
+  margin: 0 9px;
+  color: aliceblue;
+}
+.card button:nth-child(1) {
+  background-color: rgb(34, 182, 34);
+}
+.card button:nth-child(2) {
+  background-color: rgb(188, 46, 46);
+}
+
+/* toast */
+.toast {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  opacity: 1;
+}
+
+/* toast body */
+.toast-body {
+  position: relative;
+  background-color: azure;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 16px;
+  gap: 15px;
+  overflow: hidden;
+  width: 370px;
+  transform: translateX(400px);
+  opacity: 0;
+  transition:
+    transform 0.4s linear,
+    opacity 0.4s linear;
+}
+/* style slide */
+.toast-body.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+.toast-body.hidden {
+  transform: translateX(400px);
+  opacity: 0;
+}
+.text-content {
+  flex-grow: 1;
+}
+.toast-body .btn > button {
+  font-size: 24px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.toast-body .description {
+  color: rgb(113, 112, 112);
+}
+/* style success */
+.toast-body.success > span {
+  font-size: 20px;
+  color: green;
+  background-color: rgb(175, 239, 173);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding-left: 7px;
+  flex-shrink: 0;
+}
+.toast-body.success .title {
+  color: green;
+  font-weight: bold;
+}
+.toast-body.success .progress-line {
+  position: absolute;
+  background-color: rgb(7, 155, 7);
+  width: 100%;
+  height: 5px;
+  border-radius: 10px;
+  bottom: -1px;
+  left: 0;
+  transform-origin: left;
+  animation: slide 3s linear forwards;
+}
+/* style error */
+.toast-body.error > span {
+  font-size: 20px;
+  color: red;
+  background-color: rgb(179, 140, 140);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding-left: 7px;
+  flex-shrink: 0;
+}
+.toast-body.error .title {
+  color: red;
+  font-weight: bold;
+}
+.toast-body.error .progress-line {
+  position: absolute;
+  background-color: rgb(243, 37, 37);
+  width: 100%;
+  height: 5px;
+  border-radius: 10px;
+  bottom: -1px;
+  left: 0;
+  transform-origin: left;
+  animation: slide 3s linear forwards;
+}
+@keyframes slide {
+  from {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(0);
+  }
+}
